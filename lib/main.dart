@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secday/view/page/FAQ_screen.dart';
 
 import 'package:secday/view/page/startScreen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StartPage(),
+      home: FAQ_Page(),
     );
   }
 }
