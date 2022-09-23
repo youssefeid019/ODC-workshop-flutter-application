@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secday/view/component/appBarWithFilter.dart';
-import 'package:secday/view/component/loading_indecator.dart';
+import 'package:secday/view/component/core/appBarWithFilter.dart';
+import 'package:secday/view/component/core/loading_indecator.dart';
 import 'package:secday/view/component/settingsComponents/appBarText.dart';
 import 'package:secday/view_model/finals_cubit/cubit/finals_cubit.dart';
 
-import '../component/cardComponent.dart';
+import '../component/core/cardComponent.dart';
 
 class FinalsPage extends StatelessWidget {
   FinalsPage({Key? key}) : super(key: key);

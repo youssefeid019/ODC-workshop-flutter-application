@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secday/view/component/appBarWithFilter.dart';
+import 'package:secday/view/component/core/appBarWithFilter.dart';
 import 'package:secday/view/component/settingsComponents/appBarText.dart';
 import 'package:secday/view_model/midterms_cubit/cubit/midterms_cubit.dart';
 
-import '../component/cardComponent.dart';
-import '../component/loading_indecator.dart';
+import '../component/core/cardComponent.dart';
+import '../component/core/loading_indecator.dart';
 
 class MidTermPage extends StatelessWidget {
   MidTermPage({Key? key}) : super(key: key);

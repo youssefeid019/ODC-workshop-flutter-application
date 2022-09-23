@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:secday/view/component/MainTitle_comp.dart';
+import 'package:secday/view/component/core/MainTitle_comp.dart';
 import 'package:secday/view/component/home_Screen_Comp/Home_Card.dart';
 import 'package:secday/view/page/Finals_Screen.dart';
 import 'package:secday/view/page/MidTerms_Screen.dart';

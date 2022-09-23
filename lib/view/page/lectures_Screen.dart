@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secday/view_model/lectures_cubit/cubit/lectures_cubit.dart';
 
-import '../component/appBarWithFilter.dart';
-import '../component/cardComponent.dart';
-import '../component/loading_indecator.dart';
+import '../component/core/appBarWithFilter.dart';
+import '../component/core/cardComponent.dart';
+import '../component/core/loading_indecator.dart';
 
 class LecturesPage extends StatelessWidget {
   LecturesPage({Key? key}) : super(key: key);

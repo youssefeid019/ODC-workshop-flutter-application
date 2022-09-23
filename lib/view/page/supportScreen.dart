@@ -22,9 +22,14 @@ class SupportPage extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.white,
-              leading: Icon(
-                Icons.arrow_back,
-                color: Colors.orange,
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.orange,
+                ),
+                onPressed: () {
+                  Navigator.pop(context, true);
+                },
               ),
               centerTitle: true,
               title: Text(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secday/view/component/MainTitle_comp.dart';
+import 'package:secday/view/component/core/MainTitle_comp.dart';
 import 'package:secday/view/component/auth/AuthTitle.dart';
 import 'package:secday/view/component/auth/horizontalDivider.dart';
 import 'package:secday/view/component/auth/signUp_comp/dropDownButtonFormFieldComp.dart';
@@ -161,13 +161,7 @@ class SignUp extends StatelessWidget {
                         child: ElevatedButton(
                           child: Text("Sign Up"),
                           onPressed: () {
-                            if (Sc.message == "s") {
-                              Sc.message = "";
-                             
-                            } else if (Sc.message == "f") {
-                              Sc.message = "";
-                             
-                            }
+                           
                             Sc.signUp(context);
                           },
                           style: ElevatedButton.styleFrom(

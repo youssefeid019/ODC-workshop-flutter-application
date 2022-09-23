@@ -6,7 +6,7 @@ import 'package:secday/view/component/auth/AuthTitle.dart';
 import 'package:secday/view/page/signUpScreen.dart';
 import 'package:secday/view_model/Login_cubit/cubit/login_cubit.dart';
 
-import '../component/MainTitle_comp.dart';
+import '../component/core/MainTitle_comp.dart';
 import '../component/auth/textFormFieldAuth.dart';
 
 class LoginPage extends StatelessWidget {

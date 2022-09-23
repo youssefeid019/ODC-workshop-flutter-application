@@ -1,6 +1,6 @@
 import 'package:secday/view/page/signUpScreen.dart';
 
-import '../component/MainTitle_comp.dart';
+import '../component/core/MainTitle_comp.dart';
 import '../component/startScreen_comp/indecatorBar.dart';
 
 import 'package:flutter/material.dart';
