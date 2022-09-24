@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
@@ -14,6 +16,7 @@ class FaqCubit extends Cubit<FaqState> {
   String answer = "";
   double containerWidth = 390;
   double containerHeight = 0;
+  double angle=180 * pi/180;
   FAQ_Model? faqModel;
   void GetFAQ() async {
     await DioHelper.getData(url: faqEndPoint).then((value) {
@@ -29,11 +32,13 @@ class FaqCubit extends Cubit<FaqState> {
 
   void AnimateContainer() {
     if (containerHeight != 70) {
-     // containerWidth = 390;
+      // containerWidth = 390;
       containerHeight = 70;
+      angle=0;
     } else {
       //containerWidth = 0;
       containerHeight = 0;
+      angle=180 * pi/180;
     }
     emit(Animate());
   }

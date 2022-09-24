@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secday/view/component/FAQ_Screen_Comp/FAQ_AppBar.dart';
+import 'package:secday/view/component/FAQ_Screen_Comp/animated_Container.dart';
 import 'package:secday/view_model/FAQ_cubit/cubit/faq_cubit.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'dart:math';
 
 class FAQ_Page extends StatelessWidget {
   @override
@@ -38,27 +40,20 @@ class FAQ_Page extends StatelessWidget {
                           Flexible(
                               child: Html(
                                   data: faqcub.question, shrinkWrap: true)),
-                          IconButton(
-                            icon: Icon(Icons.expand_less),
-                            onPressed: () {
-                              faqcub.AnimateContainer();
-                            },
+                          Transform.rotate(
+                            angle: faqcub.angle,
+                            child: IconButton(
+                              icon: Icon(Icons.expand_less),
+                              onPressed: () {
+                                
+                                faqcub.AnimateContainer();
+                              },
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    AnimatedContainer(
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(20),
-                              bottomRight: Radius.circular(20)),
-                        ),
-                        width: faqcub.containerWidth,
-                        height: faqcub.containerHeight,
-                        //color: Colors.blueGrey,
-                        duration: Duration(milliseconds:500 ),
-                        child: Html(data: faqcub.answer)),
+                    getAnimatedContainer(faqcub),
                   ],
                 ),
               ),

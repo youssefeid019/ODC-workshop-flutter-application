@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:secday/view/page/FAQ_screen.dart';
+import 'package:secday/view/page/Terms_Conditions_Screen.dart';
 import 'package:secday/view/page/loginScreen.dart';
 import 'package:secday/view/page/supportScreen.dart';
 
@@ -24,6 +26,16 @@ Widget getSettingsListTile(String title, BuildContext context) {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => SupportPage()),
+          );
+        } else if (title == "FAQ") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FAQ_Page()),
+          );
+        } else if (title == "Terms & Conditions") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Terms_Conditions_Page()),
           );
         }
       },

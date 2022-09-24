@@ -1,7 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-PreferredSizeWidget FAQ_App_Bar(BuildContext context) {
+PreferredSizeWidget getTermsAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.white,
@@ -15,7 +15,7 @@ PreferredSizeWidget FAQ_App_Bar(BuildContext context) {
       },
     ),
     title: Text(
-      "FAQ",
+      "Terms & Conditions",
       style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
     ),
     centerTitle: true,

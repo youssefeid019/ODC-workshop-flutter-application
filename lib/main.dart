@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secday/view/page/FAQ_screen.dart';
+import 'package:secday/view/page/Terms_Conditions_Screen.dart';
 
 import 'package:secday/view/page/startScreen.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FAQ_Page(),
+      home: StartPage(),
     );
   }
 }
