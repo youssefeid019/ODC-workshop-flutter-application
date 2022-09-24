@@ -4,6 +4,7 @@ import 'package:meta/meta.dart';
 import 'package:secday/model/final_model.dart';
 import 'package:secday/view_model/dataBase/network/dio_helper.dart';
 import 'package:secday/view_model/dataBase/network/end_points.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'finals_state.dart';
 
@@ -12,10 +13,11 @@ class FinalsCubit extends Cubit<FinalsState> {
   static FinalsCubit get(context) => BlocProvider.of(context);
   FinalsModel? finalmodel;
   void getFinalsData() async {
+    final prefs = await SharedPreferences.getInstance();
     await DioHelper.getData(
             url: examsEndPoint,
             token:
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM1LCJyb2xlIjo0LCJpYXQiOjE2NjM3NjI5NjQsImV4cCI6MTc1MDE2Mjk2NH0.RpPLISsQWkv3ntSk0DqMGa5bs7GizmXGnmHi1LsqekU")
+                prefs.getString('accessToken'))
         .then((value) {
       finalmodel = FinalsModel.fromJson(value.data);
       emit(FinalsRetrived());

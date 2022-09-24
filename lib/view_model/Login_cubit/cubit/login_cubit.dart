@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:secday/model/login_model.dart';
 import 'package:secday/view_model/dataBase/network/dio_helper.dart';
@@ -10,19 +10,22 @@ import '../../../view/page/home_nav_screen.dart';
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
+  
   LoginCubit() : super(LoginInitial());
   static LoginCubit get(context) => BlocProvider.of(context);
   login_Model? lgModel;
   TextEditingController email_controller = TextEditingController();
   TextEditingController password_controller = TextEditingController();
   void login(BuildContext context) async {
-    print(email_controller.text.toString());
+    //print(email_controller.text.toString());
+    final prefs = await SharedPreferences.getInstance();
     await DioHelper.postData(url: loginEndPoint, data: {
       'email': email_controller.text.toString(),
       'password': password_controller.text.toString(),
-    }).then((value) {
+    }).then((value) async {
       print("success");
       lgModel = login_Model.fromJson(value.data);
+      await prefs.setString('accessToken', lgModel!.data!.accessToken.toString());
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => HomeNav()),
