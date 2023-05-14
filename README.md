@@ -29,19 +29,14 @@ To run the Student Mate App locally, follow these steps:
    git clone https://github.com/youssefeid019/student-mate-app.git
    ```
 
-2. Navigate to the project directory:
 
-   ```
-   cd student-mate-app
-   ```
-
-3. Install the dependencies:
+3. Install the dependencies in the project directory:
 
    ```
    flutter pub get
    ```
 
-4. Run the app:
+3. Run the app:
 
    ```
    flutter run
